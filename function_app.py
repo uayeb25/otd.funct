@@ -24,6 +24,7 @@ def QueueTriggerFunctionActivateAccount(azqueue: func.QueueMessage):
     password = os.getenv('EMAIL_PASSWORD')
     smtp_server = os.getenv('SMTP_SERVER')
     smtp_port = int(os.getenv('SMTP_PORT'))
+
     SECRET_KEY_FUNC = os.getenv('SECRET_KEY_FUNC')
 
     response = requests.post(
